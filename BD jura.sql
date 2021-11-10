@@ -6,16 +6,19 @@ CREATE TABLE Reservation (
    Prenom VARCHAR(30) NOT NULL,
    duree_sejour int NOT NULL,
    disponnibilite VARCHAR(10) NOT NULL,
-   paiement VARCHAR(10);)
+   paiement VARCHAR(10)
+   ;)
 
 
 CREATE TABLE Authentification(
-   ID_Client VARCHAR(50),
+   ID_Client serial PRIMARY KEY,
    Nom VARCHAR(50),
-   Numero BIGINT,
-   Prenom VARCHAR(50),
-   Email VARCHAR(50),
-   PRIMARY KEY(ID_Client));
+   Numero int NOT NULL,
+   Prenom VARCHAR(50) NOT NULL,
+   Email VARCHAR(50) NOT NULL,
+   mot_de_passe VARCHAR(30) NOT NULL,
+   num_de_telephone int
+   );
 
 
 CREATE TABLE Hebergement (
@@ -28,4 +31,5 @@ CREATE TABLE Hebergement (
    lits_double int NOT NULL,
    list_separes int NOT NULL,
    cloisons int NOT NULL,
-   logement_handicape int NOT NULL);
+   logement_handicape int NOT NULL
+);
