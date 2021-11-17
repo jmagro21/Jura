@@ -25,7 +25,6 @@ CREATE TABLE Authentification(
 
 CREATE TABLE Hebergement (
    ID_Hebergement serial PRIMARY KEY,
-   
    Douche int NOT NULL,
    Toilette int NOT NULL,
    nombre_lits int NOT NULL,
@@ -36,3 +35,11 @@ CREATE TABLE Hebergement (
    cloisons int NOT NULL,
    logement_handicape int NOT NULL
 );
+
+INSERT INTO Authentification (Email,Nom,num_de_telephone,mot_de_passe,Prenom,Numero)
+VALUES
+  ('vitae.risus@google.org','Ford','1-156-786-5456','Wendy','556'),
+  ('eu@protonmail.net','Lopez','(520) 914-5247','Sandra','421'),
+  ('tincidunt.neque.vitae@protonmail.edu','Mccullough','(465) 313-0881','Deborah','999'),
+  ('arcu@protonmail.ca','Todd','1-446-228-3387','Kelly','422'),
+  ('id.libero@icloud.com','Vance','(584) 335-8230','Jerome','845');
