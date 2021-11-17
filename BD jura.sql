@@ -38,8 +38,8 @@ CREATE TABLE Hebergement (
 
 INSERT INTO Authentification (Email,Nom,num_de_telephone,mot_de_passe,Prenom,Numero)
 VALUES
-  ('vitae.risus@google.org','Ford','1-156-786-5456','Wendy','556'),
-  ('eu@protonmail.net','Lopez','914-5247','Sandra','421'),
-  ('tincidunt.neque.vitae@protonmail.edu','Mccullough','313-0881','Deborah','999'),
-  ('arcu@protonmail.ca','Todd','1-446-228-3387','Kelly','422'),
-  ('id.libero@icloud.com','Vance','335-8230','Jerome','845');
+  ('vitae.risus@google.org','Ford',1-156-786-5456,'Wendy',556),
+  ('eu@protonmail.net','Lopez',914-5247,'Sandra',421),
+  ('tincidunt.neque.vitae@protonmail.edu','Mccullough',313-0881,'Deborah',999),
+  ('arcu@protonmail.ca','Todd',1-446-228-3387','Kelly',422),
+  ('id.libero@icloud.com','Vance',335-8230,'Jerome',845);
