@@ -1,5 +1,5 @@
 CREATE TABLE Reservation (
-   ID_Client serial PRIMARY KEY,
+   ID_Client serial PRIMARY KEY NOT NULL,
    FOREIGN KEY(ID_Client) REFERENCES Athentification(ID_Client),
    FOREIGN KEY(ID_Client) REFERENCES Hebergement(ID_Hebergement),
    Date_Reservation DATE NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Reservation (
 
 
 CREATE TABLE Authentification(
-   ID_Client serial PRIMARY KEY,
+   ID_Client serial PRIMARY KEY NOT NULL AUTO_INCREMENT,
    Nom VARCHAR(50),
    Numero int NOT NULL,
    Prenom VARCHAR(50) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Authentification(
 
 
 CREATE TABLE Hebergement (
-   ID_Hebergement serial PRIMARY KEY,
+   ID_Hebergement serial PRIMARY KEY NOT NULL,
    Douche int NOT NULL,
    Toilette int NOT NULL,
    nombre_lits int NOT NULL,
