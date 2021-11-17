@@ -9,7 +9,7 @@ CREATE TABLE Reservation (
    duree_sejour int NOT NULL,
    disponnibilite VARCHAR(10) NOT NULL,
    paiement VARCHAR(10)
-   ); //
+   ); 
 
 
 CREATE TABLE Authentification(
