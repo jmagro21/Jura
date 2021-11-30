@@ -34,7 +34,7 @@ CREATE TABLE Hebergement (
    list_separes int NOT NULL,
    cloisons int NOT NULL,
    logement_handicape int NOT NULL
-);
+   );
 
 INSERT INTO Authentification (Email,Nom,num_de_telephone,Prenom,mot_de_passe,Numero)
 VALUES
