@@ -18,39 +18,45 @@
             Réservation<br />
         <form 
             method="POST" >
-        <p class="tform">Informations Personnelles</p>
-           <label for="nom">nom
+        <p class="tform">Informations personnelles</p>
+           <label for="nom">Nom
                <input type="text" name="nom" id="nom">
            </label>
         <label for="Prenom">Prenom
             <input type="text" name="prenom" id="prenom">
         </label>
+        <label for="mail">Email
+            <input type="text" name="mail" id="mail">
+        </label>
+        <label for="telephone">Téléphone
+            <input type="text" name="telephone" id="telephone">
+        </label>
         <p class="tform">Logement à disposition</p>
-            <label for="Reservation">logement lit simple
+            <label for="Reservation">Logement lit simple
                <input type="radio" name="Reservation" id="logement_lit_simple" value="simple">
            </label>
-            <label for="Reservation">logement lit double
+            <label for="Reservation">Logement lit double
                <input type="radio" name="Reservation" id="logement_lit_double" value="double">
            </label>
-            <label for="Reservation">logement 3 lits
+            <label for="Reservation">Logement 3 lits
                <input type="radio" name="Reservation" id="logement_lit_3" value="triple">
            </label>
-            <label for="Reservation">logement 4 lits
+            <label for="Reservation">Logement 4 lits
                <input type="radio" name="Reservation" id="logement_lit_4" value="Quadruple">
            </label>
-            <label for="Reservation">logement spéciaux
+            <label for="Reservation">Logement spéciaux
                <input type="radio" name="Reservation" id="logement_speciaux" value="special">
            </label><br/>
-           <p class="tform"><h1>option supplémentaire</h1></p>
-           <label for="optionsupp">Pension Complète
+           <p class="tform"><h1>Option supplémentaire</h1></p>
+           <label for="optionsupp">Pension complète
                <input type="checkbox" name="optionsupp" id="pension_complete">
            </label>
-           <p class="tform">date de séjour</p>
-           <label for="datedebut">date de début de séjour
+        <p class="tform"><h1>Date de séjour</h1></p>
+           <label for="datedebut">Date de début de séjour
                <input type="date" name="datedebut" id="datedebut" >
            </label>
            <br/>
-           <label for="datefin">date de fin de séjour
+           <label for="datefin">Date de fin de séjour
                <input type="date" name="datefin" id="datefin" >
            </label><br/>
            <?php
@@ -59,6 +65,12 @@
            }
            if(isset($_post['prenom'])){
                $_post['prenom'];
+           }
+           if(isset($_post['mail'])){
+               $_post['mail'];
+           }
+           if(isset($_post['telephone'])){
+               $_post['telephone'];
            }
            if(isset($_post['Reservation'])){
                $_post['Reservation'];

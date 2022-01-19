@@ -10,8 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
-        echo 'coucou';
-        ?>
+        <?php include('Header.php'); ?>
+        
     </body>
 </html>
