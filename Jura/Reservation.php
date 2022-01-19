@@ -6,19 +6,19 @@
     </head>
  
     <body>
- 
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
     <?php include('Header.php'); ?>
     
     <!-- Le corps -->
     
-    <div id="corps">
+    <div id="container2">
         <h2>Jura CCVEN</h2>
         
         <p>
-            Réservation<br />
+        <h3>Réservation</h3><br />
         <form 
             method="POST" >
-        <p class="tform">Informations personnelles</p>
+            <p class="tform"><h3>Informations personnelles</h3></p>
            <label for="nom">Nom
                <input type="text" name="nom" id="nom">
            </label>
@@ -31,7 +31,7 @@
         <label for="telephone">Téléphone
             <input type="text" name="telephone" id="telephone">
         </label>
-        <p class="tform">Logement à disposition</p>
+        <p class="tform"><h3>Logement à disposition</h3></p>
             <label for="Reservation">Logement lit simple
                <input type="radio" name="Reservation" id="logement_lit_simple" value="simple">
            </label>
@@ -47,11 +47,11 @@
             <label for="Reservation">Logement spéciaux
                <input type="radio" name="Reservation" id="logement_speciaux" value="special">
            </label><br/>
-           <p class="tform"><h1>Option supplémentaire</h1></p>
+           <p class="tform"><h3>Option supplémentaire</h3></p>
            <label for="optionsupp">Pension complète
                <input type="checkbox" name="optionsupp" id="pension_complete">
            </label>
-        <p class="tform"><h1>Date de séjour</h1></p>
+        <p class="tform"><h3>Date de séjour</h3></p>
            <label for="datedebut">Date de début de séjour
                <input type="date" name="datedebut" id="datedebut" >
            </label>

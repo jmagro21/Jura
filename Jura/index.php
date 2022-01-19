@@ -10,7 +10,8 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
         <?php include('Header.php'); ?>
-        
+        <?php include('Footer.php'); ?>
     </body>
 </html>
