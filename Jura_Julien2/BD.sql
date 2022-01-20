@@ -1,0 +1,1 @@
+CREATE TABLE `jeu`.`utilisateur1` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `pseudo` TEXT NOT NULL , `mdp` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
