@@ -7,8 +7,6 @@ body{
   background-size: cover;
 }
 
-
-
 #container{
     width:400px;
     margin:0 auto;
@@ -19,10 +17,21 @@ body{
     margin:0 auto;
     margin-top:5%;
 }
+#container3{
+    width:50%;
+    margin:0 auto;
+    margin-top:2%;
+    background : white
+}
+#container3 img{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 /* Bordered form */
 form {
-    width:100%;
-    padding: 30px;
+    width:90%;
+    padding: 50px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -33,7 +42,6 @@ form {
     padding-bottom: 10px;
 }
 
-/* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -43,7 +51,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+/* Defini un style pour tout les boutons */
 input[type=submit] {
     background-color: #53af57;
     color: white;
@@ -58,3 +66,8 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
+
+.flotte {
+    float:left;
+}
+

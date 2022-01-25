@@ -13,25 +13,14 @@
     
     /* page: inscription.php */
 //connexion à la base de données:
-$BDD = array();
-$BDD['host'] = "localhost";
-$BDD['user'] = "root";
-$BDD['pass'] = "root";
-$BDD['db'] = "jeu";
-$mysqli = mysqli_connect($BDD['host'], $BDD['user'], $BDD['pass'], $BDD['db']);
-if(!$mysqli) {
-    echo "Connexion non établie.";
-    exit;
-}
+include('BaseD.php');
 //par défaut, on affiche le formulaire (quand il validera le formulaire sans erreur avec l'inscription validée, on l'affichera plus)
 $AfficherFormulaire=1;
 //traitement du formulaire:
 if(isset($_POST['pseudo'],$_POST['mdp'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
     if(empty($_POST['pseudo'])){//le champ pseudo est vide, on arrête l'exécution du script et on affiche un message d'erreur
         echo "Le champ Pseudo est vide.";
-    } elseif(!preg_match("#^[a-z0-9]+$#",$_POST['pseudo'])){//le champ pseudo est renseigné mais ne convient pas au format qu'on souhaite qu'il soit, soit: que des lettres minuscule + des chiffres (je préfère personnellement enregistrer le pseudo de mes membres en minuscule afin de ne pas avoir deux pseudo identique mais différents comme par exemple: Admin et admin)
-        echo "Le Pseudo doit être renseigné en lettres minuscules sans accents, sans caractères spéciaux.";
-    } elseif(strlen($_POST['pseudo'])>25){//le pseudo est trop long, il dépasse 25 caractères
+    } elseif(strlen($_POST['pseudo'])>50){//le pseudo est trop long, il dépasse 25 caractères
         echo "Le pseudo est trop long, il dépasse 25 caractères.";
     } elseif(empty($_POST['mdp'])){//le champ mot de passe est vide
         echo "Le champ Mot de passe est vide.";
@@ -51,21 +40,9 @@ if(isset($_POST['pseudo'],$_POST['mdp'])){//l'utilisateur à cliqué sur "S'insc
 }
 if($AfficherFormulaire==1){
     ?>
-    
-    <!-- 
-    Les balises <form> sert à dire que c'est un formulaire
-    on lui demande de faire fonctionner la page inscription.php une fois le bouton "S'inscrire" cliqué
-    on lui dit également que c'est un formulaire de type "POST"
-     
-    Les balises <input> sont les champs de formulaire
-    type="text" sera du texte
-    type="password" sera des petits points noir (texte caché)
-    type="submit" sera un bouton pour valider le formulaire
-    name="nom de l'input" sert à le reconnaitre une fois le bouton submit cliqué, pour le code PHP
-     -->
     <br />
     <form method="post" action="Inscription.php">
-        Pseudo  : <input type="text" name="pseudo">
+        Mail  : <input type="text" name="pseudo">
         <br />
         Mot de passe : <input type="password" name="mdp">
         <br />

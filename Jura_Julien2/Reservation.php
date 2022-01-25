@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header('Location: Connexion.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,13 +38,12 @@
            </label>
             <label for="Reservation">Logement 4 lits
                <input type="radio" name="Reservation" id="logement_lit_4" value="Quadruple">
-           </label>
-            <label for="Reservation">Logement spéciaux
-               <input type="radio" name="Reservation" id="logement_speciaux" value="special">
-           </label><br/>
            <p class="tform"><h3>Option supplémentaire</h3></p>
            <label for="optionsupp">Pension complète
                <input type="checkbox" name="optionsupp" id="pension_complete">
+           </label>
+           <label for="optionspecial">Logement Special
+               <input type="checkbox" name="optionspecial" id="logement_special">
            </label>
         <p class="tform"><h3>Date de séjour</h3></p>
            <label for="datedebut">Date de début de séjour
@@ -53,6 +60,9 @@
            if(isset($_post['optionsupp'])){
                $_post['optionsupp'];
            }
+           if(isset($_post['optionspecial'])){
+            $_post['optionspecial'];
+        }
 
            if(isset($_post['datedebut'])){
                $_post['datedebut'];

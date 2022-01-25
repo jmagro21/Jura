@@ -9,7 +9,7 @@
 
     <body>
         <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-
+            <?php include('hotel.php'); ?>
 
             <?php include('Footer.php'); ?>
     </body>

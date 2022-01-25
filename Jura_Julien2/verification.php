@@ -4,12 +4,7 @@ session_start();
 if(isset($_POST['login']) && isset($_POST['pass']))
 {
     // connexion à la base de données
-    $db_username = 'root';
-    $db_password = 'root';
-    $db_name     = 'jeu';
-    $db_host     = 'localhost';
-    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
-           or die('could not connect to database');
+    include('BaseD.php');
 
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
@@ -40,7 +35,7 @@ if(isset($_POST['login']) && isset($_POST['pass']))
 }
 else
 {
-   header('Location: index.php');
+   header('Location: Membre.php');
 }
 mysqli_close($db); // fermer la connexion
 ?> 

@@ -8,13 +8,10 @@
     <a class="navbar-brand" href="index.php">Jura</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="Connexion.php">Connexion <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Membre.php">Compte <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Reservation.php">Reservation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="Membre.php">Compte</a>
       </li>
     </ul>
     <form1 class="form-inline my-2 my-lg-0">
