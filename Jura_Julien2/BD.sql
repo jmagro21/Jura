@@ -10,7 +10,8 @@ CREATE TABLE `chambre` (
   `nom` text NOT NULL,
   `lit` int(3) NOT NULL,
   `descript` longtext NOT NULL,
-  `special` tinyint(1) NOT NULL
+  `special` tinyint(1) NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `reservation` (
@@ -19,5 +20,6 @@ CREATE TABLE `reservation` (
   `id_chambre` int(11) NOT NULL,
   `dated` date NOT NULL,
   `datef` date NOT NULL,
-  `paye` tinyint(1) NOT NULL
+  `paye` tinyint(1) NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
