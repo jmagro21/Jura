@@ -6,7 +6,7 @@ CREATE TABLE `jeu`.`utilisateur` (
     ENGINE = InnoDB;
 
 CREATE TABLE `chambre` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT , 
   `nom` text NOT NULL,
   `lit` int(3) NOT NULL,
   `descript` longtext NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE `chambre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `reservation` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT , 
   `id_utilisateur` int(11) NOT NULL,
   `id_chambre` int(11) NOT NULL,
   `dated` date NOT NULL,
