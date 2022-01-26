@@ -1,4 +1,4 @@
-CREATE TABLE `jeu`.`utilisateur1` (
+CREATE TABLE `jeu`.`utilisateur` (
     `id` INT(11) NOT NULL AUTO_INCREMENT , 
     `pseudo` TEXT NOT NULL ,
     `mdp` TEXT NOT NULL ,
