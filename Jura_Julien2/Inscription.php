@@ -13,16 +13,25 @@
     
     /* page: inscription.php */
 //connexion à la base de données:
-include('BaseD.php');
+$BDD = array();
+$BDD['host'] = "localhost";
+$BDD['user'] = "root";
+$BDD['pass'] = "root";
+$BDD['db'] = "jeu";
+$mysqli = mysqli_connect($BDD['host'], $BDD['user'], $BDD['pass'], $BDD['db']);
+if(!$mysqli) {
+    echo "Connexion non établie.";
+    exit;
+}
 //par défaut, on affiche le formulaire (quand il validera le formulaire sans erreur avec l'inscription validée, on l'affichera plus)
 $AfficherFormulaire=1;
 //traitement du formulaire:
 if(isset($_POST['pseudo'],$_POST['mdp'])){//l'utilisateur à cliqué sur "S'inscrire", on demande donc si les champs sont défini avec "isset"
     if(empty($_POST['pseudo'])){//le champ pseudo est vide, on arrête l'exécution du script et on affiche un message d'erreur
         echo "Le champ Pseudo est vide.";
-    } elseif(strlen($_POST['pseudo'])>50){//le pseudo est trop long, il dépasse 25 caractères
+    }elseif(strlen($_POST['pseudo'])>50){//le pseudo est trop long, il dépasse 50 caractères
         echo "Le pseudo est trop long, il dépasse 25 caractères.";
-    } elseif(empty($_POST['mdp'])){//le champ mot de passe est vide
+    } elseif(empty($_POST['mdp'])){
         echo "Le champ Mot de passe est vide.";
     } elseif(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM utilisateur WHERE pseudo='".$_POST['pseudo']."'"))==1){//on vérifie que ce pseudo n'est pas déjà utilisé par un autre membre
         echo "Ce pseudo est déjà utilisé.";
