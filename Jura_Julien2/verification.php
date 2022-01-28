@@ -14,10 +14,9 @@ if(isset($_POST['login']) && isset($_POST['pass']))
 
     if($login !== "" && $password !== "")
     {
-        $requete = "SELECT count(*) FROM utilisateur where pseudo = '".$login."' AND mdp = '".$password."'";
-        $exec_requete = mysqli_query($db,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
+        $requete = "SELECT * FROM utilisateur where pseudo = ".$login." AND mdp = '".$password."';";
+        $exec_requete = $db->query($requete);
+        $count = $exec_requete->rowCount();
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['login'] = $login;
